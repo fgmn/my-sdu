@@ -1,0 +1,8 @@
+*.exe
+*.doc
+*.docx
+*.txt
+# cmake相关配置文件
+.vscode
+bin
+build
