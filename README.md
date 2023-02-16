@@ -7,3 +7,7 @@
 计算机组成原理：https://github.com/fgmn/Computer-Organization-Course-Design
 
 数据结构：https://github.com/fgmn/covid-19
+
+机器学习学习博客：https://blog.csdn.net/qq_23096319/article/details/128398768
+
+请多多指教！
