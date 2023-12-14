@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "*.pl": "perl",
+        "cache.h": "c",
+        "stdio.h": "c",
+        "assert.h": "c",
+        "stdlib.h": "c",
+        "mips.h": "c",
+        "pipe.h": "c",
+        "shell.h": "c"
+    }
+}

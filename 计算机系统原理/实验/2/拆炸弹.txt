@@ -1,0 +1,26 @@
+
+
+
+qemu-mipsel -g 12344 ./bomb
+
+Another：
+
+gdb-multiarch ./bomb
+set arch mips
+set endian little
+target remote localhost:12344
+
+123456
+Let's begin now!
+1 6 30 120 360 720
+
+
+
+111111
+Let's begin now!
+1 1 1 1 1 1
+4 o 228
+5
+opekma
+
+0x004012fc in phase_4 ()： 该地址指令还未执行！

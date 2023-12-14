@@ -1,0 +1,27 @@
+整个程序：
+
+执行main
+get_command();
+    输入指令，模拟控制台，根据输入调用命令
+    go      go();       //执行命令
+    mdump   mdump();    //将内存中的数据打印
+    ?       help();     //
+    rdump();            //打印寄存器打印内存中的数据
+
+
+go();
+    循环调用cycle();
+
+cycle();
+    pipe_stage_wb();
+    pipe_stage_mem();
+    pipe_stage_execute();
+    pipe_stage_decode();
+    pipe_stage_fetch();
+    //倒着执行 取指->译码->执行->访存->回写
+
+
+pipe_stage_fetch();
+    取指，新建一个指令实例，
+
+pipe_stage_mem();

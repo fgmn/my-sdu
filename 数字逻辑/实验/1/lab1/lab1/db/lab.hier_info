@@ -1,0 +1,31 @@
+|lab
+Y0 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+b0 => inst10.IN0
+BY => inst10.IN1
+BY => inst7.IN1
+BY => inst4.IN1
+BY => inst1.IN1
+c0 => inst11.IN0
+CY => inst11.IN1
+CY => inst8.IN1
+CY => inst5.IN1
+CY => inst2.IN1
+a0 => inst9.IN0
+AY => inst9.IN1
+AY => inst6.IN1
+AY => inst3.IN1
+AY => inst.IN1
+Y1 <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+b1 => inst7.IN0
+c1 => inst8.IN0
+a1 => inst6.IN0
+Y2 <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+b2 => inst4.IN0
+c2 => inst5.IN0
+a2 => inst3.IN0
+Y3 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+b3 => inst1.IN0
+c3 => inst2.IN0
+a3 => inst.IN0
+
+
