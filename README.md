@@ -1,42 +1,43 @@
 # my sdu
 
-永远铭记这段指尖飞舞的青春。——2023年7月10日
+该仓库主要整理了山东大学计算机2020级课程的课件、平时作业、实验、往年真题以及a little bit经验，在精不在全。永远铭记这段指尖飞舞的青春。
 
-**欢迎对AI+Robotics感兴趣的同学一起交流，目前我在做强化学习在机器人控制上的应用。**
+——————————————————————
 
-该仓库主要整理了山东大学计算机2020级课程的课件、平时作业、实验、往年真题（还有很多在CSDN上可以搜到）以及a little bit经验，在精不在全。
+博客：
 
- 
+https://blog.csdn.net/qq_47865838?type=blog
 
-CSDN博客：
+https://blog.csdn.net/OOFFrankDura?type=blog
 
-19级ZCY学长：https://blog.csdn.net/qq_47865838?type=blog
+https://blog.csdn.net/qq_41552508?type=blog
 
-有一个比较全的往年题合集。
+https://blog.csdn.net/qq_23096319
 
-16级DZY学长：https://blog.csdn.net/OOFFrankDura?type=blog
+GitHub：
 
-Gene_INNOCENT学长：https://blog.csdn.net/qq_41552508?type=blog
+https://github.com/Criheacy/Computer-Graphics-Experiments 图形学
 
-干货满满。
+ https://github.com/J1aM1ng/SDUCS-Material 综合
 
-我自己的：[https://blog.csdn.net/qq_23096319](https://blog.csdn.net/qq_23096319?spm=1000.2115.3001.5343)
+https://github.com/sdu-openlab/OpenCourse 综合
 
- 
+https://github.com/AjdeDjokovic/ComputerOrganizationCourseDesign 计组
 
-我的课设项目：
-
-（编译原理）PL0编译器：https://github.com/fgmn/PL0-Compiler23
-
-（操作系统）Nachos OS：https://github.com/fgmn/OS-Course-Design
-
-（计算机组成原理）简单模型机设计：
-
-https://github.com/fgmn/Computer-Organization-Course-Design
-
-（数据结构与算法）低风险出行系统：https://github.com/fgmn/covid-19
+https://github.com/seed-labs/seed-labs 信息安全导论
 
 
 
-![https://github.com/fgmn/my-sdu/blob/main/summary_01.png](https://github.com/fgmn/my-sdu/blob/main/summary_01.png)
+你想要的课程信息整理成表格的形式如下：
+
+| 课程                 | 平时作业                                                     | 实验                                                         | 真题                                                         | 评价和感受                                                   |
+| -------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 编译原理             | 挺难的，特别是LR分析法，有一道作业题足足写了3个多小时。答案在《编译原理学习指导与典型题解析》可以找到。 | PL0编译器，需要在OJ上提交。                                  | 题型比较固定。                                               |                                                              |
+| 体系结构             | 有答案。                                                     | 要用Win7，全部关于流水线。很无聊。                           | 重点都在作业题中出现了。                                     | 前面基本都学过，虽然但是LF会点名。后面标量和向量处理机讲新东西。课程网站：[https://funglee.github.io/csa/csa.html](https://funglee.github.io/csa/csa.html) 课件和实验均在上面。 |
+| 信息安全导论（限选） | 无                                                           | 挺有意思的，教你怎么利用漏洞发动各种攻击，我基本都是看ppt做的。可以参考我的，但是要自己做一遍，要求每一步都截图，上面有名字和学号。 | 期中是读论文，演讲，topic的新颖性最为重要。期末是写一个论文，可以是原创的idea，19级有一个组就发了一篇CCF-B。不过大部分人都选择了写综述。 | 客观来说，这门课的任务量要远远大于其他选修课。老师是意大利人，剑桥博士，很善于倾听，全英文授课。而且这个课只有21个人，可以有很多机会练习oral English。而且这门课应该也是为数不多让你接触科研的课。对于我们比较难受的是因为假期冲掉了3次课，最后考试周补了3次课，而且最后的论文的大部分工作我们也是被迫在考试周完成的，个人觉得计科的同学要慎重。给分比较客观，感觉最后论文是最重要的，还好我和一个一作发过论文的大佬合作了，被狠狠带飞。 |
+| 软件工程与实践       | 无                                                           | 组队写文档，chatgpt强力加持                                  | 一张纸半开卷，主要是要结合自己项目谈谈一些软件开发概念。     |                                                              |
+| 计算机图形学         | 无                                                           | 最后会做一个games101的实验，写几个shader，有难度。           | 光线和规则物体求交一定会考！                                 | 个人觉得LL讲课一般，她也不强制你听，可以去听XSQ的课。        |
+| 算法设计与分析       | 答案在几个review的ppt中。                                    | 无，纯理论。                                                 | 中规中矩，只学图论任务量还好，享受过程。                     |                                                              |
+| 机器学习（限选）     | 好像没有标准答案，可以看看我写的hh。                         | 可以使用MATLAB或者Python，我用的MATLAB，网上也有Python版本。验收很划水。 | LF会出新题，得理解原理，平时得多多练习，都是符号推导。最后有35分捞人。 | 课程网站：https://funglee.github.io/ml/ml.html 讲统计机器学习，线性回归，逻辑回归，SVM，贝叶斯估计，PCA降维，聚类。先行课是线性代数和概率论，MLE和常见的矩阵求导（记住就好）得知道，对符号能力要求挺高的，建议看看ppt再考虑要不要选。我们这级有20几个人。 |
+| 操作系统 | 无 | 没有标准答案，看个人理解。好像主要是进程同步与互斥。有一个重量级的写一个shell，我是自己实现了一个还是非常难的，自己写的太垃圾了，不知道有没有比较容易读懂的开源shell可以提前了解一下。 | Hfx改卷比较严格，对表述规范要求比较高，高分佬直接刷考研题。 | 课程内容比较多。每节课都验收，每次都是内卷现场，我是真的谢。Hls的课实验指导书都比较详细，认真看基本可以掌握。 |                                                           |                                                              |                                                              |
 

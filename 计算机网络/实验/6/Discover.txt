@@ -1,0 +1,453 @@
+No.     Time                          Source                Destination           Protocol Length Info
+    413 2022-04-26 16:47:38.229818    0.0.0.0               255.255.255.255       DHCP     342    DHCP Discover - Transaction ID 0x59d8566c
+
+Frame 413: 342 bytes on wire (2736 bits), 342 bytes captured (2736 bits) on interface \Device\NPF_{5387F7EC-BB57-4339-86BC-87E740046725}, id 0
+Ethernet II, Src: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+    Destination: Broadcast (ff:ff:ff:ff:ff:ff)
+    Source: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 0.0.0.0, Dst: 255.255.255.255
+User Datagram Protocol, Src Port: 68, Dst Port: 67
+Dynamic Host Configuration Protocol (Discover)
+    Message type: Boot Request (1)
+    Hardware type: Ethernet (0x01)
+    Hardware address length: 6
+    Hops: 0
+    Transaction ID: 0x59d8566c
+    Seconds elapsed: 0
+    Bootp flags: 0x0000 (Unicast)
+    Client IP address: 0.0.0.0
+    Your (client) IP address: 0.0.0.0
+    Next server IP address: 0.0.0.0
+    Relay agent IP address: 0.0.0.0
+    Client MAC address: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7)
+    Client hardware address padding: 00000000000000000000
+    Server host name not given
+    Boot file name not given
+    Magic cookie: DHCP
+    Option: (53) DHCP Message Type (Discover)
+    Option: (61) Client identifier
+    Option: (55) Parameter Request List
+    Option: (255) End
+    Padding: 00000000000000000000000000000000000000000000000000000000000000
+
+No.     Time                          Source                Destination           Protocol Length Info
+    416 2022-04-26 16:47:38.406923    172.25.255.254        172.25.157.89         DHCP     342    DHCP Offer    - Transaction ID 0x59d8566c
+
+Frame 416: 342 bytes on wire (2736 bits), 342 bytes captured (2736 bits) on interface \Device\NPF_{5387F7EC-BB57-4339-86BC-87E740046725}, id 0
+Ethernet II, Src: JuniperN_f6:12:a0 (28:a2:4b:f6:12:a0), Dst: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7)
+    Destination: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7)
+    Source: JuniperN_f6:12:a0 (28:a2:4b:f6:12:a0)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 172.25.255.254, Dst: 172.25.157.89
+User Datagram Protocol, Src Port: 67, Dst Port: 68
+Dynamic Host Configuration Protocol (Offer)
+    Message type: Boot Reply (2)
+    Hardware type: Ethernet (0x01)
+    Hardware address length: 6
+    Hops: 1
+    Transaction ID: 0x59d8566c
+    Seconds elapsed: 0
+    Bootp flags: 0x0000 (Unicast)
+    Client IP address: 0.0.0.0
+    Your (client) IP address: 172.25.157.89
+    Next server IP address: 0.0.0.0
+    Relay agent IP address: 0.0.0.0
+    Client MAC address: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7)
+    Client hardware address padding: 00000000000000000000
+    Server host name not given
+    Boot file name not given
+    Magic cookie: DHCP
+    Option: (53) DHCP Message Type (Offer)
+    Option: (54) DHCP Server Identifier (172.25.255.254)
+    Option: (51) IP Address Lease Time
+    Option: (1) Subnet Mask (255.255.128.0)
+    Option: (3) Router
+    Option: (6) Domain Name Server
+    Option: (255) End
+    Padding: 00000000000000000000000000000000000000000000
+
+No.     Time                          Source                Destination           Protocol Length Info
+    417 2022-04-26 16:47:38.407201    0.0.0.0               255.255.255.255       DHCP     342    DHCP Request  - Transaction ID 0x59d8566c
+
+Frame 417: 342 bytes on wire (2736 bits), 342 bytes captured (2736 bits) on interface \Device\NPF_{5387F7EC-BB57-4339-86BC-87E740046725}, id 0
+Ethernet II, Src: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+    Destination: Broadcast (ff:ff:ff:ff:ff:ff)
+    Source: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 0.0.0.0, Dst: 255.255.255.255
+User Datagram Protocol, Src Port: 68, Dst Port: 67
+Dynamic Host Configuration Protocol (Request)
+    Message type: Boot Request (1)
+    Hardware type: Ethernet (0x01)
+    Hardware address length: 6
+    Hops: 0
+    Transaction ID: 0x59d8566c
+    Seconds elapsed: 0
+    Bootp flags: 0x0000 (Unicast)
+    Client IP address: 0.0.0.0
+    Your (client) IP address: 0.0.0.0
+    Next server IP address: 0.0.0.0
+    Relay agent IP address: 0.0.0.0
+    Client MAC address: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7)
+    Client hardware address padding: 00000000000000000000
+    Server host name not given
+    Boot file name not given
+    Magic cookie: DHCP
+    Option: (53) DHCP Message Type (Request)
+    Option: (61) Client identifier
+    Option: (50) Requested IP Address (172.25.157.89)
+    Option: (54) DHCP Server Identifier (172.25.255.254)
+    Option: (55) Parameter Request List
+    Option: (255) End
+    Padding: 00000000000000000000000000000000000000
+
+No.     Time                          Source                Destination           Protocol Length Info
+    419 2022-04-26 16:47:38.771625    172.25.255.254        172.25.157.89         DHCP     342    DHCP ACK      - Transaction ID 0x59d8566c
+
+Frame 419: 342 bytes on wire (2736 bits), 342 bytes captured (2736 bits) on interface \Device\NPF_{5387F7EC-BB57-4339-86BC-87E740046725}, id 0
+Ethernet II, Src: JuniperN_f6:12:a0 (28:a2:4b:f6:12:a0), Dst: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7)
+    Destination: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7)
+    Source: JuniperN_f6:12:a0 (28:a2:4b:f6:12:a0)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 172.25.255.254, Dst: 172.25.157.89
+User Datagram Protocol, Src Port: 67, Dst Port: 68
+Dynamic Host Configuration Protocol (ACK)
+    Message type: Boot Reply (2)
+    Hardware type: Ethernet (0x01)
+    Hardware address length: 6
+    Hops: 1
+    Transaction ID: 0x59d8566c
+    Seconds elapsed: 0
+    Bootp flags: 0x0000 (Unicast)
+    Client IP address: 0.0.0.0
+    Your (client) IP address: 172.25.157.89
+    Next server IP address: 0.0.0.0
+    Relay agent IP address: 0.0.0.0
+    Client MAC address: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7)
+    Client hardware address padding: 00000000000000000000
+    Server host name not given
+    Boot file name not given
+    Magic cookie: DHCP
+    Option: (53) DHCP Message Type (ACK)
+    Option: (54) DHCP Server Identifier (172.25.255.254)
+    Option: (51) IP Address Lease Time
+    Option: (1) Subnet Mask (255.255.128.0)
+    Option: (3) Router
+    Option: (6) Domain Name Server
+    Option: (255) End
+    Padding: 00000000000000000000000000000000000000000000
+
+No.     Time                          Source                Destination           Protocol Length Info
+   1055 2022-04-26 16:48:09.275110    172.25.157.89         172.25.255.254        DHCP     342    DHCP Request  - Transaction ID 0xf16e1f70
+
+Frame 1055: 342 bytes on wire (2736 bits), 342 bytes captured (2736 bits) on interface \Device\NPF_{5387F7EC-BB57-4339-86BC-87E740046725}, id 0
+Ethernet II, Src: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7), Dst: JuniperN_f6:12:a0 (28:a2:4b:f6:12:a0)
+    Destination: JuniperN_f6:12:a0 (28:a2:4b:f6:12:a0)
+    Source: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 172.25.157.89, Dst: 172.25.255.254
+User Datagram Protocol, Src Port: 68, Dst Port: 67
+Dynamic Host Configuration Protocol (Request)
+    Message type: Boot Request (1)
+    Hardware type: Ethernet (0x01)
+    Hardware address length: 6
+    Hops: 0
+    Transaction ID: 0xf16e1f70
+    Seconds elapsed: 0
+    Bootp flags: 0x0000 (Unicast)
+    Client IP address: 172.25.157.89
+    Your (client) IP address: 0.0.0.0
+    Next server IP address: 0.0.0.0
+    Relay agent IP address: 0.0.0.0
+    Client MAC address: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7)
+    Client hardware address padding: 00000000000000000000
+    Server host name not given
+    Boot file name not given
+    Magic cookie: DHCP
+    Option: (53) DHCP Message Type (Request)
+    Option: (61) Client identifier
+    Option: (55) Parameter Request List
+    Option: (255) End
+    Padding: 00000000000000000000000000000000000000000000000000000000000000
+
+No.     Time                          Source                Destination           Protocol Length Info
+   1056 2022-04-26 16:48:09.322635    172.25.255.254        172.25.157.89         DHCP     342    DHCP ACK      - Transaction ID 0xf16e1f70
+
+Frame 1056: 342 bytes on wire (2736 bits), 342 bytes captured (2736 bits) on interface \Device\NPF_{5387F7EC-BB57-4339-86BC-87E740046725}, id 0
+Ethernet II, Src: JuniperN_f6:12:a0 (28:a2:4b:f6:12:a0), Dst: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7)
+    Destination: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7)
+    Source: JuniperN_f6:12:a0 (28:a2:4b:f6:12:a0)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 172.25.255.254, Dst: 172.25.157.89
+User Datagram Protocol, Src Port: 67, Dst Port: 68
+Dynamic Host Configuration Protocol (ACK)
+    Message type: Boot Reply (2)
+    Hardware type: Ethernet (0x01)
+    Hardware address length: 6
+    Hops: 1
+    Transaction ID: 0xf16e1f70
+    Seconds elapsed: 0
+    Bootp flags: 0x0000 (Unicast)
+    Client IP address: 172.25.157.89
+    Your (client) IP address: 172.25.157.89
+    Next server IP address: 0.0.0.0
+    Relay agent IP address: 0.0.0.0
+    Client MAC address: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7)
+    Client hardware address padding: 00000000000000000000
+    Server host name not given
+    Boot file name not given
+    Magic cookie: DHCP
+    Option: (53) DHCP Message Type (ACK)
+    Option: (54) DHCP Server Identifier (172.25.255.254)
+    Option: (51) IP Address Lease Time
+    Option: (1) Subnet Mask (255.255.128.0)
+    Option: (3) Router
+    Option: (6) Domain Name Server
+    Option: (255) End
+    Padding: 00000000000000000000000000000000000000000000
+
+No.     Time                          Source                Destination           Protocol Length Info
+   1174 2022-04-26 16:48:21.961374    172.25.157.89         172.25.255.254        DHCP     342    DHCP Release  - Transaction ID 0x62bf9090
+
+Frame 1174: 342 bytes on wire (2736 bits), 342 bytes captured (2736 bits) on interface \Device\NPF_{5387F7EC-BB57-4339-86BC-87E740046725}, id 0
+Ethernet II, Src: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7), Dst: JuniperN_f6:12:a0 (28:a2:4b:f6:12:a0)
+    Destination: JuniperN_f6:12:a0 (28:a2:4b:f6:12:a0)
+    Source: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 172.25.157.89, Dst: 172.25.255.254
+User Datagram Protocol, Src Port: 68, Dst Port: 67
+Dynamic Host Configuration Protocol (Release)
+    Message type: Boot Request (1)
+    Hardware type: Ethernet (0x01)
+    Hardware address length: 6
+    Hops: 0
+    Transaction ID: 0x62bf9090
+    Seconds elapsed: 0
+    Bootp flags: 0x0000 (Unicast)
+    Client IP address: 172.25.157.89
+    Your (client) IP address: 0.0.0.0
+    Next server IP address: 0.0.0.0
+    Relay agent IP address: 0.0.0.0
+    Client MAC address: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7)
+    Client hardware address padding: 00000000000000000000
+    Server host name not given
+    Boot file name not given
+    Magic cookie: DHCP
+    Option: (53) DHCP Message Type (Release)
+    Option: (54) DHCP Server Identifier (172.25.255.254)
+    Option: (61) Client identifier
+    Option: (255) End
+    Padding: 000000000000000000000000000000000000000000000000000000000000000000000000…
+
+No.     Time                          Source                Destination           Protocol Length Info
+   6134 2022-04-26 16:48:48.784987    0.0.0.0               255.255.255.255       DHCP     342    DHCP Discover - Transaction ID 0xac7e60b7
+
+Frame 6134: 342 bytes on wire (2736 bits), 342 bytes captured (2736 bits) on interface \Device\NPF_{5387F7EC-BB57-4339-86BC-87E740046725}, id 0
+Ethernet II, Src: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+    Destination: Broadcast (ff:ff:ff:ff:ff:ff)
+    Source: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 0.0.0.0, Dst: 255.255.255.255
+User Datagram Protocol, Src Port: 68, Dst Port: 67
+Dynamic Host Configuration Protocol (Discover)
+    Message type: Boot Request (1)
+    Hardware type: Ethernet (0x01)
+    Hardware address length: 6
+    Hops: 0
+    Transaction ID: 0xac7e60b7
+    Seconds elapsed: 0
+    Bootp flags: 0x0000 (Unicast)
+    Client IP address: 0.0.0.0
+    Your (client) IP address: 0.0.0.0
+    Next server IP address: 0.0.0.0
+    Relay agent IP address: 0.0.0.0
+    Client MAC address: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7)
+    Client hardware address padding: 00000000000000000000
+    Server host name not given
+    Boot file name not given
+    Magic cookie: DHCP
+    Option: (53) DHCP Message Type (Discover)
+    Option: (61) Client identifier
+    Option: (55) Parameter Request List
+    Option: (255) End
+    Padding: 00000000000000000000000000000000000000000000000000000000000000
+
+No.     Time                          Source                Destination           Protocol Length Info
+   6137 2022-04-26 16:48:48.926560    172.25.255.254        172.25.157.89         DHCP     342    DHCP Offer    - Transaction ID 0xac7e60b7
+
+Frame 6137: 342 bytes on wire (2736 bits), 342 bytes captured (2736 bits) on interface \Device\NPF_{5387F7EC-BB57-4339-86BC-87E740046725}, id 0
+Ethernet II, Src: JuniperN_f6:12:a0 (28:a2:4b:f6:12:a0), Dst: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7)
+    Destination: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7)
+    Source: JuniperN_f6:12:a0 (28:a2:4b:f6:12:a0)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 172.25.255.254, Dst: 172.25.157.89
+User Datagram Protocol, Src Port: 67, Dst Port: 68
+Dynamic Host Configuration Protocol (Offer)
+    Message type: Boot Reply (2)
+    Hardware type: Ethernet (0x01)
+    Hardware address length: 6
+    Hops: 1
+    Transaction ID: 0xac7e60b7
+    Seconds elapsed: 0
+    Bootp flags: 0x0000 (Unicast)
+    Client IP address: 0.0.0.0
+    Your (client) IP address: 172.25.157.89
+    Next server IP address: 0.0.0.0
+    Relay agent IP address: 0.0.0.0
+    Client MAC address: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7)
+    Client hardware address padding: 00000000000000000000
+    Server host name not given
+    Boot file name not given
+    Magic cookie: DHCP
+    Option: (53) DHCP Message Type (Offer)
+    Option: (54) DHCP Server Identifier (172.25.255.254)
+    Option: (51) IP Address Lease Time
+    Option: (1) Subnet Mask (255.255.128.0)
+    Option: (3) Router
+    Option: (6) Domain Name Server
+    Option: (255) End
+    Padding: 00000000000000000000000000000000000000000000
+
+No.     Time                          Source                Destination           Protocol Length Info
+   6138 2022-04-26 16:48:48.926891    0.0.0.0               255.255.255.255       DHCP     342    DHCP Request  - Transaction ID 0xac7e60b7
+
+Frame 6138: 342 bytes on wire (2736 bits), 342 bytes captured (2736 bits) on interface \Device\NPF_{5387F7EC-BB57-4339-86BC-87E740046725}, id 0
+Ethernet II, Src: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+    Destination: Broadcast (ff:ff:ff:ff:ff:ff)
+    Source: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 0.0.0.0, Dst: 255.255.255.255
+User Datagram Protocol, Src Port: 68, Dst Port: 67
+Dynamic Host Configuration Protocol (Request)
+    Message type: Boot Request (1)
+    Hardware type: Ethernet (0x01)
+    Hardware address length: 6
+    Hops: 0
+    Transaction ID: 0xac7e60b7
+    Seconds elapsed: 0
+    Bootp flags: 0x0000 (Unicast)
+    Client IP address: 0.0.0.0
+    Your (client) IP address: 0.0.0.0
+    Next server IP address: 0.0.0.0
+    Relay agent IP address: 0.0.0.0
+    Client MAC address: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7)
+    Client hardware address padding: 00000000000000000000
+    Server host name not given
+    Boot file name not given
+    Magic cookie: DHCP
+    Option: (53) DHCP Message Type (Request)
+    Option: (61) Client identifier
+    Option: (50) Requested IP Address (172.25.157.89)
+    Option: (54) DHCP Server Identifier (172.25.255.254)
+    Option: (55) Parameter Request List
+    Option: (255) End
+    Padding: 00000000000000000000000000000000000000
+
+No.     Time                          Source                Destination           Protocol Length Info
+   6141 2022-04-26 16:48:49.322229    172.25.255.254        172.25.157.89         DHCP     342    DHCP ACK      - Transaction ID 0xac7e60b7
+
+Frame 6141: 342 bytes on wire (2736 bits), 342 bytes captured (2736 bits) on interface \Device\NPF_{5387F7EC-BB57-4339-86BC-87E740046725}, id 0
+Ethernet II, Src: JuniperN_f6:12:a0 (28:a2:4b:f6:12:a0), Dst: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7)
+    Destination: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7)
+    Source: JuniperN_f6:12:a0 (28:a2:4b:f6:12:a0)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 172.25.255.254, Dst: 172.25.157.89
+User Datagram Protocol, Src Port: 67, Dst Port: 68
+Dynamic Host Configuration Protocol (ACK)
+    Message type: Boot Reply (2)
+    Hardware type: Ethernet (0x01)
+    Hardware address length: 6
+    Hops: 1
+    Transaction ID: 0xac7e60b7
+    Seconds elapsed: 0
+    Bootp flags: 0x0000 (Unicast)
+    Client IP address: 0.0.0.0
+    Your (client) IP address: 172.25.157.89
+    Next server IP address: 0.0.0.0
+    Relay agent IP address: 0.0.0.0
+    Client MAC address: e2:d1:01:36:15:f7 (e2:d1:01:36:15:f7)
+    Client hardware address padding: 00000000000000000000
+    Server host name not given
+    Boot file name not given
+    Magic cookie: DHCP
+    Option: (53) DHCP Message Type (ACK)
+    Option: (54) DHCP Server Identifier (172.25.255.254)
+    Option: (51) IP Address Lease Time
+    Option: (1) Subnet Mask (255.255.128.0)
+    Option: (3) Router
+    Option: (6) Domain Name Server
+    Option: (255) End
+    Padding: 00000000000000000000000000000000000000000000
+
+No.     Time                          Source                Destination           Protocol Length Info
+   6144 2022-04-26 16:48:49.369941    172.25.255.254        255.255.255.255       DHCP     342    DHCP ACK      - Transaction ID 0x687d70e0
+
+Frame 6144: 342 bytes on wire (2736 bits), 342 bytes captured (2736 bits) on interface \Device\NPF_{5387F7EC-BB57-4339-86BC-87E740046725}, id 0
+Ethernet II, Src: JuniperN_f6:12:a0 (28:a2:4b:f6:12:a0), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+    Destination: Broadcast (ff:ff:ff:ff:ff:ff)
+    Source: JuniperN_f6:12:a0 (28:a2:4b:f6:12:a0)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 172.25.255.254, Dst: 255.255.255.255
+User Datagram Protocol, Src Port: 67, Dst Port: 68
+Dynamic Host Configuration Protocol (ACK)
+    Message type: Boot Reply (2)
+    Hardware type: Ethernet (0x01)
+    Hardware address length: 6
+    Hops: 1
+    Transaction ID: 0x687d70e0
+    Seconds elapsed: 0
+    Bootp flags: 0x8000, Broadcast flag (Broadcast)
+    Client IP address: 0.0.0.0
+    Your (client) IP address: 172.25.234.186
+    Next server IP address: 0.0.0.0
+    Relay agent IP address: 0.0.0.0
+    Client MAC address: IntelCor_95:f1:b4 (0c:dd:24:95:f1:b4)
+    Client hardware address padding: 00000000000000000000
+    Server host name not given
+    Boot file name not given
+    Magic cookie: DHCP
+    Option: (53) DHCP Message Type (ACK)
+    Option: (54) DHCP Server Identifier (172.25.255.254)
+    Option: (51) IP Address Lease Time
+    Option: (1) Subnet Mask (255.255.128.0)
+    Option: (3) Router
+    Option: (6) Domain Name Server
+    Option: (255) End
+    Padding: 00000000000000000000000000000000000000000000
+
+No.     Time                          Source                Destination           Protocol Length Info
+   6251 2022-04-26 16:48:56.538067    172.25.255.254        255.255.255.255       DHCP     342    DHCP ACK      - Transaction ID 0x1680da7f
+
+Frame 6251: 342 bytes on wire (2736 bits), 342 bytes captured (2736 bits) on interface \Device\NPF_{5387F7EC-BB57-4339-86BC-87E740046725}, id 0
+Ethernet II, Src: JuniperN_f6:12:a0 (28:a2:4b:f6:12:a0), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+    Destination: Broadcast (ff:ff:ff:ff:ff:ff)
+    Source: JuniperN_f6:12:a0 (28:a2:4b:f6:12:a0)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 172.25.255.254, Dst: 255.255.255.255
+User Datagram Protocol, Src Port: 67, Dst Port: 68
+Dynamic Host Configuration Protocol (ACK)
+    Message type: Boot Reply (2)
+    Hardware type: Ethernet (0x01)
+    Hardware address length: 6
+    Hops: 1
+    Transaction ID: 0x1680da7f
+    Seconds elapsed: 0
+    Bootp flags: 0x8000, Broadcast flag (Broadcast)
+    Client IP address: 0.0.0.0
+    Your (client) IP address: 172.25.234.186
+    Next server IP address: 0.0.0.0
+    Relay agent IP address: 0.0.0.0
+    Client MAC address: IntelCor_95:f1:b4 (0c:dd:24:95:f1:b4)
+    Client hardware address padding: 00000000000000000000
+    Server host name not given
+    Boot file name not given
+    Magic cookie: DHCP
+    Option: (53) DHCP Message Type (ACK)
+    Option: (54) DHCP Server Identifier (172.25.255.254)
+    Option: (51) IP Address Lease Time
+    Option: (1) Subnet Mask (255.255.128.0)
+    Option: (3) Router
+    Option: (6) Domain Name Server
+    Option: (255) End
+    Padding: 00000000000000000000000000000000000000000000
