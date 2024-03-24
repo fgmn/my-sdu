@@ -1,0 +1,127 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 160 208)
+	(text "CPS" (rect 5 0 28 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 176 25 188)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "ROM[7]" (rect 0 0 41 14)(font "Arial" (font_size 8)))
+		(text "ROM[7]" (rect 21 27 62 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "ROM[8]" (rect 0 0 41 14)(font "Arial" (font_size 8)))
+		(text "ROM[8]" (rect 21 43 62 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "ROM[9]" (rect 0 0 41 14)(font "Arial" (font_size 8)))
+		(text "ROM[9]" (rect 21 59 62 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "ROM[10]" (rect 0 0 48 14)(font "Arial" (font_size 8)))
+		(text "ROM[10]" (rect 21 75 69 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "CLK" (rect 0 0 23 14)(font "Arial" (font_size 8)))
+		(text "CLK" (rect 21 91 44 105)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 144 32)
+		(output)
+		(text "CPR0" (rect 0 0 30 14)(font "Arial" (font_size 8)))
+		(text "CPR0" (rect 93 27 123 41)(font "Arial" (font_size 8)))
+		(line (pt 144 32)(pt 128 32))
+	)
+	(port
+		(pt 144 48)
+		(output)
+		(text "CPR1" (rect 0 0 30 14)(font "Arial" (font_size 8)))
+		(text "CPR1" (rect 93 43 123 57)(font "Arial" (font_size 8)))
+		(line (pt 144 48)(pt 128 48))
+	)
+	(port
+		(pt 144 64)
+		(output)
+		(text "CPPC" (rect 0 0 30 14)(font "Arial" (font_size 8)))
+		(text "CPPC" (rect 93 59 123 73)(font "Arial" (font_size 8)))
+		(line (pt 144 64)(pt 128 64))
+	)
+	(port
+		(pt 144 80)
+		(output)
+		(text "CPIR" (rect 0 0 25 14)(font "Arial" (font_size 8)))
+		(text "CPIR" (rect 98 75 123 89)(font "Arial" (font_size 8)))
+		(line (pt 144 80)(pt 128 80))
+	)
+	(port
+		(pt 144 96)
+		(output)
+		(text "CPMAR" (rect 0 0 42 14)(font "Arial" (font_size 8)))
+		(text "CPMAR" (rect 81 91 123 105)(font "Arial" (font_size 8)))
+		(line (pt 144 96)(pt 128 96))
+	)
+	(port
+		(pt 144 112)
+		(output)
+		(text "CPR2" (rect 0 0 30 14)(font "Arial" (font_size 8)))
+		(text "CPR2" (rect 93 107 123 121)(font "Arial" (font_size 8)))
+		(line (pt 144 112)(pt 128 112))
+	)
+	(port
+		(pt 144 128)
+		(output)
+		(text "CPR3" (rect 0 0 30 14)(font "Arial" (font_size 8)))
+		(text "CPR3" (rect 93 123 123 137)(font "Arial" (font_size 8)))
+		(line (pt 144 128)(pt 128 128))
+	)
+	(port
+		(pt 144 144)
+		(output)
+		(text "CPSP" (rect 0 0 30 14)(font "Arial" (font_size 8)))
+		(text "CPSP" (rect 93 139 123 153)(font "Arial" (font_size 8)))
+		(line (pt 144 144)(pt 128 144))
+	)
+	(port
+		(pt 144 160)
+		(output)
+		(text "CPCX" (rect 0 0 31 14)(font "Arial" (font_size 8)))
+		(text "CPCX" (rect 92 155 123 169)(font "Arial" (font_size 8)))
+		(line (pt 144 160)(pt 128 160))
+	)
+	(drawing
+		(rectangle (rect 16 16 128 176))
+	)
+)

@@ -1,0 +1,14 @@
+procedure f1;
+	procedure f2;
+		procedure f3;
+			procedure f4;
+			begin
+			end;
+		begin
+		end;
+	begin
+	end;
+begin
+end;
+begin
+end.

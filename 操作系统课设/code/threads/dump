@@ -1,0 +1,50 @@
+>>> Building dependency file for switch-linux.s <<<
+>>> Building dependency file for  ../machine/timer.cc <<<
+>>> Building dependency file for  ../machine/stats.cc <<<
+>>> Building dependency file for  ../machine/sysdep.cc <<<
+>>> Building dependency file for  ../machine/interrupt.cc <<<
+>>> Building dependency file for  synchtest.cc <<<
+>>> Building dependency file for  threadtest.cc <<<
+>>> Building dependency file for  utility.cc <<<
+>>> Building dependency file for  thread.cc <<<
+>>> Building dependency file for  system.cc <<<
+>>> Building dependency file for  synchlist.cc <<<
+>>> Building dependency file for  synch.cc <<<
+>>> Building dependency file for  scheduler.cc <<<
+>>> Building dependency file for  list.cc <<<
+>>> Building dependency file for  main.cc <<<
+>>> Compiling main.cc <<<
+g++ -g -Wall -Wshadow -fwritable-strings -I../threads -I../machine -DTHREADS -DHOST_i386 -DHOST_LINUX -DCHANGED -c -o arch/unknown-i386-linux/objects/main.o main.cc
+>>> Compiling list.cc <<<
+g++ -g -Wall -Wshadow -fwritable-strings -I../threads -I../machine -DTHREADS -DHOST_i386 -DHOST_LINUX -DCHANGED -c -o arch/unknown-i386-linux/objects/list.o list.cc
+>>> Compiling scheduler.cc <<<
+g++ -g -Wall -Wshadow -fwritable-strings -I../threads -I../machine -DTHREADS -DHOST_i386 -DHOST_LINUX -DCHANGED -c -o arch/unknown-i386-linux/objects/scheduler.o scheduler.cc
+>>> Compiling synch.cc <<<
+g++ -g -Wall -Wshadow -fwritable-strings -I../threads -I../machine -DTHREADS -DHOST_i386 -DHOST_LINUX -DCHANGED -c -o arch/unknown-i386-linux/objects/synch.o synch.cc
+>>> Compiling synchlist.cc <<<
+g++ -g -Wall -Wshadow -fwritable-strings -I../threads -I../machine -DTHREADS -DHOST_i386 -DHOST_LINUX -DCHANGED -c -o arch/unknown-i386-linux/objects/synchlist.o synchlist.cc
+>>> Compiling system.cc <<<
+g++ -g -Wall -Wshadow -fwritable-strings -I../threads -I../machine -DTHREADS -DHOST_i386 -DHOST_LINUX -DCHANGED -c -o arch/unknown-i386-linux/objects/system.o system.cc
+>>> Compiling thread.cc <<<
+g++ -g -Wall -Wshadow -fwritable-strings -I../threads -I../machine -DTHREADS -DHOST_i386 -DHOST_LINUX -DCHANGED -c -o arch/unknown-i386-linux/objects/thread.o thread.cc
+>>> Compiling utility.cc <<<
+g++ -g -Wall -Wshadow -fwritable-strings -I../threads -I../machine -DTHREADS -DHOST_i386 -DHOST_LINUX -DCHANGED -c -o arch/unknown-i386-linux/objects/utility.o utility.cc
+>>> Compiling threadtest.cc <<<
+g++ -g -Wall -Wshadow -fwritable-strings -I../threads -I../machine -DTHREADS -DHOST_i386 -DHOST_LINUX -DCHANGED -c -o arch/unknown-i386-linux/objects/threadtest.o threadtest.cc
+>>> Compiling synchtest.cc <<<
+g++ -g -Wall -Wshadow -fwritable-strings -I../threads -I../machine -DTHREADS -DHOST_i386 -DHOST_LINUX -DCHANGED -c -o arch/unknown-i386-linux/objects/synchtest.o synchtest.cc
+>>> Compiling ../machine/interrupt.cc <<<
+g++ -g -Wall -Wshadow -fwritable-strings -I../threads -I../machine -DTHREADS -DHOST_i386 -DHOST_LINUX -DCHANGED -c -o arch/unknown-i386-linux/objects/interrupt.o ../machine/interrupt.cc
+>>> Compiling ../machine/sysdep.cc <<<
+g++ -g -Wall -Wshadow -fwritable-strings -I../threads -I../machine -DTHREADS -DHOST_i386 -DHOST_LINUX -DCHANGED -c -o arch/unknown-i386-linux/objects/sysdep.o ../machine/sysdep.cc
+>>> Compiling ../machine/stats.cc <<<
+g++ -g -Wall -Wshadow -fwritable-strings -I../threads -I../machine -DTHREADS -DHOST_i386 -DHOST_LINUX -DCHANGED -c -o arch/unknown-i386-linux/objects/stats.o ../machine/stats.cc
+>>> Compiling ../machine/timer.cc <<<
+g++ -g -Wall -Wshadow -fwritable-strings -I../threads -I../machine -DTHREADS -DHOST_i386 -DHOST_LINUX -DCHANGED -c -o arch/unknown-i386-linux/objects/timer.o ../machine/timer.cc
+>>> Assembling switch-linux.s <<<
+/lib/cpp  -D HOST_i386 -D HOST_LINUX switch-linux.s > arch/unknown-i386-linux/objects/tmp.s
+as -o arch/unknown-i386-linux/objects/switch-linux.o arch/unknown-i386-linux/objects/tmp.s
+rm arch/unknown-i386-linux/objects/tmp.s
+>>> Linking arch/unknown-i386-linux/bin/nachos <<<
+g++ arch/unknown-i386-linux/objects/main.o arch/unknown-i386-linux/objects/list.o arch/unknown-i386-linux/objects/scheduler.o arch/unknown-i386-linux/objects/synch.o arch/unknown-i386-linux/objects/synchlist.o arch/unknown-i386-linux/objects/system.o arch/unknown-i386-linux/objects/thread.o arch/unknown-i386-linux/objects/utility.o arch/unknown-i386-linux/objects/threadtest.o arch/unknown-i386-linux/objects/synchtest.o arch/unknown-i386-linux/objects/interrupt.o arch/unknown-i386-linux/objects/sysdep.o arch/unknown-i386-linux/objects/stats.o arch/unknown-i386-linux/objects/timer.o arch/unknown-i386-linux/objects/switch-linux.o  -o arch/unknown-i386-linux/bin/nachos		
+ln -sf arch/unknown-i386-linux/bin/nachos nachos

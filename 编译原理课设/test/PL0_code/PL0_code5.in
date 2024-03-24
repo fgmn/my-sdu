@@ -1,0 +1,51 @@
+const c1=2;
+var v1,v2,v3,v4;
+procedure p1;
+ var v5;
+ begin
+  v5:=2;
+  write(v5);
+  while v3#0 do
+  begin
+   v4:=v1/v2;
+   v3:=v1-v4*v2;
+   v1:=v2;
+   v2:=v3;
+  end;
+ end;
+procedure p2;
+ const c2=2;
+ procedure p3;
+  begin
+   if v1#1 then
+   begin
+    v1:=v1-1;  
+    v2:=v2*v1;
+    call p3;
+   end;
+  end;
+ begin
+  call p3;
+  if odd c2 then
+   write(c2);
+  if c2=2 then
+   write(c2)
+ end;
+begin
+ read(v1,v2);
+ if v1<v2 then
+ begin
+  v3:=v1;
+  v1:=v2;
+  v2:=v3;
+ end;
+ begin;
+  v3:=1;
+  call p1;
+  write(c1,v1,c1);
+ end;
+ read(v1);
+ v2:=v1;
+ call p2;
+ write(v2);
+end.

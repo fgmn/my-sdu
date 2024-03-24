@@ -1,0 +1,4 @@
+VAR A,B;
+BEGIN
+	A : = B;
+END.

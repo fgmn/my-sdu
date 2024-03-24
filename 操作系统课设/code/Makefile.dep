@@ -1,0 +1,104 @@
+# This is part of a GNU-Makefile, to specify system-dependent 
+# parts of the Makefile enviroment.
+
+# This gets included as part of the GNU-Makefile used in each of 
+# the subdirectories.
+
+# Waterloo modifications should make picking up the right machine
+# definition automatic.  You should not have to edit this file for
+# either MIPS machines (cantor.math), or SPARC (descartes, napier,
+# cayley, ...).  
+
+ifndef MAKEFILE_DEP
+define MAKEFILE_DEP
+yes
+endef
+
+# These definitions may change as the software is updated.
+# Some of them are also system dependent
+CPP=/lib/cpp
+CC = g++ -m32
+LD = g++ -m32
+AS = as -32
+
+uname = $(shell uname)
+# 获取Nachos所使用的操作系统平台
+$(warning $(uname))
+$(info $(uname))
+# $(error $(uanme))
+
+mips_arch = dec-mips-ultrix
+
+# DEC MIPS, Ultrix
+ifeq ($(uname),ULTRIX)
+HOST := -DHOST_MIPS
+arch = $(mips_arch)
+CPPFLAGS = -P $(INCDIR) $(HOST)
+ifdef MAKEFILE_TEST
+LDFLAGS = -T script -N 
+endif
+endif
+
+# SUN SPARC, Sun 4.xx 
+ifeq ($(uname),SunOS)
+HOST := -DHOST_SPARC -DHOST_IS_BIG_ENDIAN
+arch = sun-sparc-sunos
+CPPFLAGS = $(INCDIR) $(HOST)
+ifdef MAKEFILE_TEST
+GCCDIR = /software/gcc_nachos/bin/decstation-ultrix-
+LDFLAGS = -T script -N
+ASFLAGS = -mips2
+endif
+endif
+
+# HP PA-RISC, HP_UX
+# NOTE: I don't have access to an HP so I don't know what 
+#       uname really outputs here...
+ifeq ($(uname),HpUX)
+HOST = -DHOST_SNAKE -DHOST_IS_BIG_ENDIAN
+arch = parisc-hpux
+endif
+
+# 386, 386BSD Unix, or NetBSD Unix (available via anon ftp 
+#    from agate.berkeley.edu)
+ifeq ($(uname),Linux)
+HOST_LINUX=-linux
+HOST = -DHOST_i386 -DHOST_LINUX
+CPP=/lib/cpp
+CPPFLAGS = $(INCDIR) -D HOST_i386 -D HOST_LINUX
+arch = unknown-i386-linux
+ifdef MAKEFILE_TEST
+#GCCDIR = /usr/local/nachos/bin/decstation-ultrix-
+#交叉编译器路径
+GCCDIR = /usr/local/mips/bin/decstation-ultrix-
+LDFLAGS = -T script -N
+ASFLAGS = -mips2
+endif
+endif
+
+# slight variant for 386 FreeBSD
+ifeq ($(uname),386FreeBSD)
+HOST = -DHOST_i386 -DFreeBSD
+CPP=/usr/bin/cpp
+arch = x86-freebsd
+endif
+
+# OSF on DEC Alpha by David Bowers
+ifeq ($(uname),OSF1)
+HOST = -DHOST_ALPHA
+CPPFLAGS = $(INCDIR) -D HOST_ALPHA
+CPP=/usr/local/lib/gcc-lib/alpha-dec-osf4.0/2.7.2/cpp
+arch = dec-alpha-osf
+ifdef MAKEFILE_TEST
+GCCDIR = /home/unit/66204/gcc/bin/decstation-ultrix-
+LDFLAGS = -T script -N
+ASFLAGS = -mips2
+endif
+endif
+
+arch_dir = arch/$(arch)
+obj_dir = $(arch_dir)/objects
+bin_dir = $(arch_dir)/bin
+depends_dir = $(arch_dir)/depends
+
+endif # MAKEFILE_DEP

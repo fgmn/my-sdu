@@ -1,0 +1,7 @@
+CONST C=0;
+VAR A,B;
+BEGIN
+	READ(B,A);
+	A:=B+C;
+	WRITE(A);
+END.

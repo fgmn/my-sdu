@@ -1,0 +1,15 @@
+ifndef MAKEFILE_NETWORK_LOCAL
+define MAKEFILE_NETWORK_LOCAL
+yes
+endef
+
+# Add sourcefiles here.
+
+CCFILES += nettest.cc\
+	post.cc\
+	network.cc
+
+DEFINES += -DNETWORK
+INCPATH += -I../network
+
+endif # MAKEFILE_NETWORK_LOCAL

@@ -1,0 +1,19 @@
+var n, ans;
+procedure fact;
+	var depth;
+	begin
+		if n > 1 then
+		begin
+			depth := n;
+			n := n - 1;
+			call fact;
+			ans := depth * ans;
+		end;
+	end;
+begin
+	ans := 1;
+	read(n);
+	if (n + 1) = 10 then n := n - 1;
+	call fact;
+	write(ans)
+end.

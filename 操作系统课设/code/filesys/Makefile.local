@@ -1,0 +1,25 @@
+ifndef MAKEFILE_FILESYS_LOCAL
+define MAKEFILE_FILESYS_LOCAL
+yes
+endef
+
+# Add new sourcefiles here.
+
+CCFILES +=bitmap.cc\
+        directory.cc\
+	filehdr.cc\
+	filesys.cc\
+	fstest.cc\
+	openfile.cc\
+	synchdisk.cc\
+	disk.cc
+
+ifdef MAKEFILE_USERPROG_LOCAL
+DEFINES := $(DEFINES:FILESYS_STUB=FILESYS)
+# 将DEFINES变量中的FILESYS_STUB替换为FILESYS！
+else
+INCPATH += -I../userprog -I../filesys
+DEFINES += -DFILESYS_NEEDED -DFILESYS
+endif
+
+endif # MAKEFILE_FILESYS_LOCAL

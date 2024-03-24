@@ -1,0 +1,14 @@
+ifndef MAKEFILE_VM_LOCAL
+define MAKEFILE_VM_LOCAL
+yes
+endef
+
+# The default VM doesn't add any new source files.
+# As always, you should add new source files here.
+
+CCFILES +=
+
+DEFINES += -DVM -DUSE_TLB
+INCPATH += -I../vm
+
+endif # MAKEFILE_VM_LOCAL

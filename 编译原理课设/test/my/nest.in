@@ -1,0 +1,33 @@
+const k=10;
+var a, b;
+procedure f1;
+	var b,c;
+	procedure f2;
+		var c,d;
+		procedure f3;
+			var d,e;
+			begin
+			write(c);
+			a := a + b;
+			end;
+		begin
+		b := 5;
+		write(b);
+		call f3;
+		end;
+	procedure f4;
+		var c, e;
+		begin
+		a := a + 1;
+		c := 3;
+		write(a);
+		call f2;
+		end;
+	begin
+    call f4;
+	end;
+begin
+write(a);
+call f1;
+write(a);
+end.

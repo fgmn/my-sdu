@@ -1,0 +1,20 @@
+const k=10;
+var a, b;
+procedure f1;
+	var b,c;
+	procedure f2;
+		var c,d;
+		begin
+		write(a, a);
+		if a < k then call f1;
+		end;
+	begin
+	a := a + 1;
+	write(a);
+    call f2;
+	end;
+begin
+a := a + 1;
+write(a);
+call f1;
+end.

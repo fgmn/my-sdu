@@ -1,0 +1,187 @@
+# This is part of a GNU Makefile, included by the Makefiles in
+# each of the subdirectories.  
+#
+# The dependency graph between assignments is:
+#   1. THREADS before everything else
+#   2. USERPROG must come before VM
+#   3. USERPROG can come before or after FILESYS, but if USERPROG comes 
+#	before (as in this distribution), then it must define FILESYS_STUB
+#
+# Other than that, you have complete flexibility.
+
+# The Makefiles for nachos have been pretty much completely re-worked
+# for the Waterloo environment.  The re-work centers around supporting
+# multiple architectures (MIPS and SPARC) simultaneously and automatically,
+# and completely automatic dependency generation; both of which make 
+# heavy use of advanced features of GNU Make.
+
+# To build nachos, you should only have to type 'make' in the appropriate
+# directory.  You can type make in the toplevel nachos/code directory and
+# build all versions of nachos, but this will probably blow your diskquota.
+
+# To build nachos user programs, you should just have to type 'make' in
+# the nachos/code/test directory.
+
+# See the files */Makefile and */Makefile.local for how to re-order the
+# assignments, and how to add new source files.
+
+# You might want to play with the CFLAGS, but if you use -O it may
+# break the thread system.  You might want to use -fno-inline if
+# you need to call some inline functions from the debugger.
+
+# Copyright (c) 1992 The Regents of the University of California.
+# All rights reserved.	See copyright.h for copyright notice and limitation 
+# of liability and disclaimer of warranty provisions.
+
+ifndef MAKEFILE_COMMON
+define MAKEFILE_COMMON
+yes
+endef
+
+# Makefile.dep is where most machine/architecture dependent stuff
+# should go.
+
+include ../Makefile.dep
+
+# vpath tells gnu make where to look for certain files, as determined
+# by the target pattern, if it cannot find them in the current directory.
+
+vpath %.cc  ../network:../filesys:../vm:../userprog:../threads:../machine
+vpath %.h   ../network:../filesys:../vm:../userprog:../threads:../machine
+vpath %.s   ../network:../filesys:../vm:../userprog:../threads:../machine
+
+
+#CFLAGS = -g -Wall -Wshadow -fwritable-strings $(INCPATH) $(DEFINES) $(HOST) -DCHANGED
+# to comment -fwritable-strings out to make new compiler happy 
+# -ptang, 8/22/05
+CFLAGS = -g -Wall -Wshadow $(INCPATH) $(DEFINES) $(HOST) -DCHANGED
+
+# The variables {C,S,CC}FILES should be initialized by the Makefile
+# that invokes this makefile.  The ofiles variable is used in building
+# the different versions of nachos corresponding to each assignment; it
+# is not used by the Makefiles for the bin or test directories.
+ 
+s_ofiles = $(SFILES:%.s=$(obj_dir)/%.o)
+c_ofiles = $(CFILES:%.c=$(obj_dir)/%.o)
+cc_ofiles = $(CCFILES:%.cc=$(obj_dir)/%.o)
+
+ofiles = $(cc_ofiles) $(c_ofiles) $(s_ofiles) 
+
+program = $(bin_dir)/nachos
+
+# Unless the invoking Makefile defines a target before including
+# Makefile.common (this file), then the following target will be the
+# default.
+
+$(program): $(ofiles)
+
+#
+# rules for building various sorts of files
+#
+
+# Executables: We know a file is an executable by the file prefix
+# $(bin_dir).  This rule specifies how to build the executable, but it 
+# does not specify the dependencies.  The dependencies are specified
+# elsewhere.  When gmake has multiple rules for a given target, it
+# combines the dependencies as if they all came from one rule; thus,
+# the $^ macro in the command below refers to dependencies of this target
+# as specified by the other rules.  Also note that only one of the rules
+# for a given target may include commands to build the target.
+
+$(bin_dir)/% :
+	@echo ">>> Linking" $@ "<<<"
+	$(LD) $^ $(LDFLAGS) -o $@		
+	ln -sf $@ $(notdir $@)
+
+# Building object files (.o) from C++ source (.cc) files.
+# See the comment above for executables regarding multiple rules.
+$(obj_dir)/%.o: %.cc
+	@echo ">>> Compiling" $< "<<<"
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+# Building object files (.o) from C source (.c) files.
+# See the comment above for executables regarding multiple rules.
+$(obj_dir)/%.o: %.c
+	@echo ">>> Compiling" $< "<<<"
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+# Building object files (.o) from assembly source (.s) files.
+#
+# We run assembly files through the C pre-processor, before passing
+# them on to the assembler.
+#
+# See the comment above for executables regarding multiple rules.
+$(obj_dir)/%.o: %.s
+	@echo ">>> Assembling" $< "<<<"
+	$(CPP) $(CPPFLAGS) $< > $(obj_dir)/tmp.s
+	$(AS) -o $@ $(obj_dir)/tmp.s
+	rm $(obj_dir)/tmp.s
+
+
+# Automatic dependency generation: see gmake info documentation for
+# full details.  This stuff supercedes the old make depend stuff.
+
+# We want to build a .d file for every source file (.s, .c, .cc), which
+# contains make rules generated automatically by gcc/cpp.  The .d files
+# are to be included later in this Makefile.
+
+s_dfiles = $(SFILES:%.s=$(depends_dir)/%.d)
+c_dfiles = $(CFILES:%.c=$(depends_dir)/%.d)
+cc_dfiles = $(CCFILES:%.cc=$(depends_dir)/%.d)
+
+dfiles = $(cc_dfiles) $(c_dfiles) $(s_dfiles) 
+
+
+# The following set of rules define how to build dependency files
+# automatically from various source files.  These rules have been
+# taken from the gmake documentation with minor modifications.
+
+$(depends_dir)/%.d: %.cc
+	@echo ">>> Building dependency file for " $< "<<<"
+	@$(SHELL) -ec '$(CC) -MM $(CFLAGS) $< \
+	| sed '\''s@$*.o[ ]*:@$(depends_dir)/$(notdir $@) $(obj_dir)/&@g'\'' > $@'
+
+$(depends_dir)/%.d: %.c
+	@echo ">>> Building dependency file for" $< "<<<"
+	@$(SHELL) -ec '$(CC) -MM $(CFLAGS) $< \
+	| sed '\''s@$*.o[ ]*:@$(depends_dir)/$(notdir $@) $(obj_dir)/&@g'\'' > $@'
+
+$(depends_dir)/%.d: %.s
+	@echo ">>> Building dependency file for" $< "<<<"
+	@$(SHELL) -ec '$(CPP) -MM $(CPPFLAGS) $< \
+	| sed '\''s@$*.o[ ]*:@$(depends_dir)/$(notdir $@) $(obj_dir)/&@g'\'' > $@'
+
+# Include the generated dependency files.  Note gnu make treats these
+# files in a special way.  Each of them is treated as a sort of
+# target.  If for example, one of the .d files in $(dfiles) depends on
+# a .c file that has been re-compiled, the above rules will cause the
+# .d file to be re-generated.  GNU make will detect this, and re-read
+# the makefiles again so that any changes from the .c file are
+# correctly reflected by the dependency graph.
+
+# The short of it is that this Makefile will automatically infer the complete
+# up-to-date dependencies between .{c,cc,s} files and .h files.
+
+include $(dfiles)
+
+# Clean out all generated files.  Note: this only cleans the files
+# corresponding to the current architecture.  
+
+# Also note, there is quirk when you do two make clean's in a row, or 
+# rather, make clean on an already clean directory.
+
+# Because of the way the dependency stuff above works, before doing the
+# second clean, GNU make will regenerate dependency information, which
+# was removed by the first clean.  Finally, the second clean will remove
+# the dependency information it just created... blech.
+
+clean:
+	rm -f `find $(arch_dir) -type f -print | egrep -v '(CVS|cvsignore)'`
+	rm -f nachos coff2noff coff2flat
+	rm -f *.noff *.flat
+
+tmpclean:
+	rm -f tmp*
+
+endif # MAKEFILE_COMMON
+

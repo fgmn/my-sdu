@@ -1,0 +1,28 @@
+ifndef MAKEFILE_USERPROG_LOCAL
+define MAKEFILE_USERPROG_LOCAL
+yes
+endef
+
+# If you add new files, you need to add them to CCFILES,
+# you can define CFILES if you choose to make .c files instead.
+# 
+# Make sure you use += and not = here.
+
+CCFILES += addrspace.cc\
+	bitmap.cc\
+	exception.cc\
+	progtest.cc\
+	console.cc\
+	machine.cc\
+	mipssim.cc\
+	translate.cc
+
+INCPATH += -I../bin -I../userprog -I../filesys
+
+ifdef MAKE_FILE_FILESYS_LOCAL
+DEFINES += -DUSER_PROGRAM
+else
+DEFINES += -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB
+endif
+
+endif # MAKEFILE_USERPROG_LOCAL
